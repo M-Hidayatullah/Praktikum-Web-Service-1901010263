@@ -30,6 +30,9 @@ Route::prefix('admin')->group(function () {
          //roles
          Route::resource('/role', App\Http\Controllers\Admin\RoleController::class, ['except' => ['show'] ,'as' => 'admin']);
 
+         //users
+        Route::resource('/user', App\Http\Controllers\Admin\UserController::class, ['except' => ['show'] ,'as' => 'admin']);
+
     });
 
 });
