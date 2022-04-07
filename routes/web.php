@@ -11,6 +11,8 @@ Route::get('/name', function () {
     return 'My name is M.Hidayatullah';
 });
 
+Route::get('/devlanding', [App\Http\Controllers\DevLanding\DevLandingController::class, 'index'])->name('devlanding.index');
+
 // disable register
 Auth::routes(['register' => false]);
 
