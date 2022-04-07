@@ -68,5 +68,11 @@ class PermissionsTableSeeder extends Seeder
         Permission::create(['name' => 'users.create']);
         Permission::create(['name' => 'users.edit']);
         Permission::create(['name' => 'users.delete']);
+
+         //permission for tags
+         Permission::create(['name' => 'soal.index']);
+         Permission::create(['name' => 'soal.create']);
+         Permission::create(['name' => 'soal.edit']);
+         Permission::create(['name' => 'soal.delete']);
     }
 }

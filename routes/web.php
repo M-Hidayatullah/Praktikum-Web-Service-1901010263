@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -35,6 +34,9 @@ Route::prefix('admin')->group(function () {
 
         //tags
         Route::resource('/tag', App\Http\Controllers\Admin\TagController::class, ['except' => 'show' ,'as' => 'admin']);
+
+        //soal
+        Route::resource('/soal', App\Http\Controllers\Admin\SoalController::class, ['except' => 'show' ,'as' => 'admin']);
 
     });
 

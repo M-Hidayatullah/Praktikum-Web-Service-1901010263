@@ -59,10 +59,10 @@
             <div class="main-sidebar sidebar-style-2">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="index.html">Dayat Blog</a>
+                        <a href="">Dayat Blog</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="index.html">DB</a>
+                        <a href="">DB</a>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">MAIN MENU</li>
@@ -80,6 +80,11 @@
                         </li>
                         @endcan
 
+                        @can('soal.index')
+                        <li class="{{ setActive('admin/soal') }}"><a class="nav-link" href="{{ route('admin.soal.index') }}"><i class="fas fa-book"></i> <span>Soal</span></a>
+                        </li>
+                        @endcan
+
                         @can('categories.index')
                         <li class="{{ setActive('admin/category') }}"><a class="nav-link"
                                 href="#"><i class="fas fa-folder"></i>
@@ -91,6 +96,7 @@
                                 href="#"><i class="fas fa-bell"></i>
                                 <span>Agenda</span></a></li>
                         @endcan
+
 
                         @if(auth()->user()->can('photos.index') || auth()->user()->can('videos.index'))
                         <li class="menu-header">GALERI</li>
